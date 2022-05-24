@@ -1,11 +1,9 @@
 import requests
 import json
 from time import sleep
-from tabulate import tabulate
-from random import randint
-from gns3fy import Gns3Connector, Project
 
 urlServidor= 'http://localhost:3080'
+
 projetcID = '2073e2d8-6fd3-4ceb-82a7-20698ae8f6ba'
 
 linkPC1 = '1500f49b-071e-4a2e-b501-a2adafabebb5'
@@ -13,8 +11,6 @@ linkPC1 = '1500f49b-071e-4a2e-b501-a2adafabebb5'
 linkDelay = 'a3807de3-4274-48ed-b601-76b874d133d6'
 linkJitter = 'a496844b-9bf2-4511-bc4b-e975c61b7bed'
 linkNormal = 'c8248876-42f7-442b-9f71-ee5becf9677d'
-
-server = Gns3Connector(urlServidor)
 
 mudar = 0
 countD = 0

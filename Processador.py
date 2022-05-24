@@ -1,9 +1,6 @@
 import csv
 from time import sleep
 
-
-
-
 def rodarArquivo (nomeArquivo,saida, label,labelP,labelDU,perda=True,mult=1,):
     pacotes = []
 
@@ -13,10 +10,12 @@ def rodarArquivo (nomeArquivo,saida, label,labelP,labelDU,perda=True,mult=1,):
         tipo = '' #request / reply
         teveReply = False
 
-    # 1. abrir o arquivo
+    # 1. abrir o arquivo a ser Processado
     with open(nomeArquivo, encoding='utf-8') as arquivo_referencia:
-        with open(saida, 'w' , encoding='utf-8') as f: #Mudar o csv que vai ter que escrever
-            # 2. ler a tabela
+        
+        # 2. Ja "Abre" o arquivo de saida (Cria ele se não existe)
+        with open(saida, 'w' , encoding='utf-8') as f:
+
             tabela = csv.reader(arquivo_referencia, delimiter=',')
 
             # 3. navegar pela tabela

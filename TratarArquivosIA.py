@@ -7,9 +7,9 @@ import Misturador
 
 import ExecutandoIA
 
-entradaD = './entrada/d0.csv'
-entradaJ = './entrada/j0.csv'
-entradaN = './entrada/n0.csv'
+entradaD = './entrada/delay.csv'
+entradaJ = './entrada/jitter.csv'
+entradaN = './entrada/normal.csv'
 
 
 saidaD = './saida/processadoD.csv'
@@ -53,6 +53,8 @@ sleep(5)
 print('Misturando')
 Misturador.misturaArquivos(saidaD, saidaJ, saidaN,saidaM)
 sleep(3)
+
+Misturador.contador(saidaM)
 
 print('Executando IA')
 ExecutandoIA.executaIA(saidaM, 0.2)
